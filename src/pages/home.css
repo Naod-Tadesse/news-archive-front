@@ -1,0 +1,80 @@
+/* home.css */
+
+.h-screen {
+  position: relative;
+  height: 100vh;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-radial-gradient(
+      circle at center center,
+      transparent 0px,
+      transparent 11px,
+      rgba(255, 255, 255, 0.04) 11px,
+      rgba(255, 255, 255, 0.04) 19px,
+      transparent 19px,
+      transparent 29px,
+      rgba(255, 255, 255, 0.04) 29px,
+      rgba(255, 255, 255, 0.04) 33px
+    ),
+    repeating-radial-gradient(
+      circle at center center,
+      rgb(0, 0, 0) 0px,
+      rgb(0, 0, 0) 5px,
+      rgb(0, 0, 0) 5px,
+      rgb(0, 0, 0) 17px,
+      rgb(0, 0, 0) 17px,
+      rgb(0, 0, 0) 30px,
+      rgb(0, 0, 0) 30px,
+      rgb(0, 0, 0) 43px,
+      rgb(0, 0, 0) 43px,
+      rgb(0, 0, 0) 45px,
+      rgb(0, 0, 0) 45px,
+      rgb(0, 0, 0) 47px
+    );
+  background-size: 53px 53px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* Adjust the blur radius as needed */
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the alpha value for darkness */
+}
+
+.flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+/* Additional styles for text */
+p {
+  color: white; /* Set text color to white */
+  text-align: center; /* Center-align text */
+  padding: 20px; /* Add padding to the text */
+}
+.no-blur {
+  filter: none; /* Remove blur effect */
+}
