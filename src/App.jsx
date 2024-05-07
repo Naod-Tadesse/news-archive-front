@@ -1,15 +1,10 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import Home from "./pages/Home";
-function App() {
-  const [count, setCount] = useState(0);
+import React from "react";
+import { Button } from "primereact/button";
 
+export default function App() {
   return (
-    <>
-      <Home />
-    </>
+    <div className="card flex justify-content-center">
+      <Button label="Check" icon="pi pi-check" />
+    </div>
   );
 }
-
-export default App;
