@@ -5,6 +5,8 @@ import React from "react";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
 import Archive from "./pages/archive";
+import Grid from "./components/Grid";
+import News from "./pages/News";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +15,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "archive", element: <Archive /> },
+      { path: "grid", element: <Grid /> },
+      { path: "news", element: <News /> },
     ],
   },
 ]);

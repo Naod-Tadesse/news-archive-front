@@ -1,11 +1,13 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  // baseURL: "http://localhost:4000/api",
-  baseURL: "https://news-archive-backend.onrender.com/api",
+  baseURL: "https://newsapi.org/v2",
+  params: {
+    apiKey: "9ff3f18c39fb45f2b734fe42edf6eba8",
+  },
 });
 
-class APIClient {
+class NewsApi {
   constructor(endpoint) {
     this.endpoint = endpoint;
   }
@@ -18,4 +20,4 @@ class APIClient {
   };
 }
 
-export default APIClient;
+export default NewsApi;

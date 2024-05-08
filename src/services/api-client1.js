@@ -2,10 +2,10 @@ import axios from "axios";
 
 const axiosInstance = axios.create({
   // baseURL: "http://localhost:4000/api",
-  baseURL: "https://news-archive-backend.onrender.com/api",
+  baseURL: "https://news-archive-article-backend.onrender.com/api",
 });
 
-class APIClient {
+class APIClientText {
   constructor(endpoint) {
     this.endpoint = endpoint;
   }
@@ -18,4 +18,4 @@ class APIClient {
   };
 }
 
-export default APIClient;
+export default APIClientText;
