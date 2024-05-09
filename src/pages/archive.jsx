@@ -191,7 +191,7 @@ export default function Archive() {
             </div>
           </div>
         </Dialog>
-        <div className="flex flex-column align-items-center w-full bg-gray-100">
+        <div className="flex flex-column w-full bg-gray-100">
           <div className="flex justify-content-center align-items-center gap-4 p-3">
             <p className="font-semibold text-xl">
               Navigate through dates and see historical news headlines:
