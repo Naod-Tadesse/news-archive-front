@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from "react";
 import NewsApi from "../services/News-api";
 import Grid from "../components/Grid";
+import APIClient from "../services/api-client1";
 
-const newsApi = new NewsApi("/top-headlines");
+const apiClient = new APIClient("/getdailynews");
 
 export default function News() {
   const [data, setData] = useState(null);
   const [data1, setData1] = useState(null);
   const fetchApi = () => {
     console.log("starting");
-    newsApi
+    apiClient
       .getAll({
         sources: "bbc-news", // Pass query parameters as an object
       })
       .then((response) => {
-        setData(response.data.articles);
+        setData(response.data);
       })
       .catch((error) => {
         console.error("Error fetching news:", error);
       });
 
-    newsApi
+    apiClient
       .getAll({
         country: "us", // Pass query parameters as an object
       })
       .then((response) => {
-        console.log(response.data);
-        setData1(response.data.articles);
+        setData1(response.data);
       })
       .catch((error) => {
         console.error("Error fetching news:", error);
